@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'bankgothic-regular', sans-serif;
+}
+
+
+#wrap {
+    height: 500px; /* Defina o valor de altura desejado */
+    width: 100vh;
+    background-image: url('bg.webp');
+    background-color: rgb(34, 34, 34);
+    margin: 0 auto;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+#copy {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura para ocupar toda a tela verticalmente */
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-auto-rows: 80px;
+    grid-gap: 10px;
+}
+
+
+.square-button {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    background-color: #4a0027;
+    border: none;
+    outline: none;
+}
+
+
+
+.changebutton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.difchangebutton {
+  background-color: blue;
+}
+
+.slide-enter-active, .slide-leave-active {
+  animation: slide 0.4s ease;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  animation: slide  0.4s ease reverse;
+}
+
+@keyframes slide {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0px;
+  }
+}

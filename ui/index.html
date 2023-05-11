@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @font-face {
+            font-family: 'bankgothic-regular';
+            src: url('bankgothic-regular.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="center-container">
+        <div id="wrap" v-if="showing">
+            <div id="copy" :style="changestyle">
+                <h1 style="font-family: 'bankgothic-regular', sans-serif;">Painel de trabalhos</h1>
+                <div class="button-container">
+                    <button v-for="button in buttons" :key="button.id" class="square-button"
+                            @click="handleButtonClick(button.id)" @mouseover="showInfo(button.id)" @mouseleave="hideInfo">
+                        {{ button.text }}
+                    </button>
+                </div>
+                <div class="changebutton" @click="showing = false" style="font-family: 'bankgothic-regular', sans-serif;">FECHAR</div>
+                <div v-if="hoveredButton" class="info-container">
+                    <h2>{{ hoveredButton.title }}</h2>
+                    <p>{{ hoveredButton.info }}</p>
+                    <p>Salario: {{ hoveredButton.salary }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Importe seu aplicativo JS e o JS Vendor (vue.js) -->
+    <script src="vendor/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
