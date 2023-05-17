@@ -1,11 +1,11 @@
 # ldev_jobs
-> PAINEL PARA EMPREGOS COM LICENÇA VORP-CORE
+> PAINEL PARA EMPREGOS COM LICENÃ‡A
 
 ## Como instalar
 * Baixe este repositorio
 * Copie e cole `ldev_jobs` na pasta `resources/`
 * Adicione `ensure vorp_status` no seu `server.cfg`
-* E pronto está funcionando
+* E pronto estÃ¡ funcionando
 
 ## Requirements
 - [VORP-Core](https://github.com/VORPCORE/VORP-Core/releases)
